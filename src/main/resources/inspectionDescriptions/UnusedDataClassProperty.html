@@ -1,0 +1,11 @@
+<html>
+<body>
+Reports primary-constructor components of a Kotlin <code>data class</code> that are never read
+(or, when declared <code>var</code>, never read nor written) anywhere in the project.
+<p>
+Accesses from the synthetic kotlinx.serialization serializer (not present in the PSI) and from
+<code>KSerializer</code> implementations do not count as usage: this is meant to surface properties
+populated only for serialization but never actually consumed.
+</p>
+</body>
+</html>
